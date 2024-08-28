@@ -1,19 +1,20 @@
 # Wojciech Kasprzyk
 
-I am a big fan of application performance optimization and reactive programming. 
+I am a big fan of application,
+<b>performance optimization</b> and reactive programming. 
 I love finding new, better ways to solve technical and business cases. 
 
-Over the past 7 years, I contributed to user-oriented CMS for the healthcare sector, 
+Over the past <b>7 years</b>, I contributed to user-oriented CMS for the healthcare sector, 
 fleet management web and mobile applications tracking vehicles owned by over two thousand organizations, 
 fluid management system dedicated to petrol retailers and buyers, 
 and real estate market micro frontend applications connecting buyers, brokers, and developers.
 
-I love well-designed applications having UX that helps to solve user problems, and well-designed architecture having Developer Experience that helps to avoid future problems.
+I love <b>well-designed</b> applications having <b>UX</b> that helps to solve user problems, and well-designed architecture having Developer Experience that helps to avoid future problems.
 
 So far I have 
-Angular,
-NgRx,
-RxJs,
+<b>Angular</b>,
+<b>NgRx</b>,
+<b>RxJs</b>,
 Nx workspace,
 React,
 Storybook,
@@ -69,7 +70,7 @@ Title: <b>Web Developer & Mobile Developer</b>
   - The instrument for visualising and managing customers water network infrastructure and devices
   - TELL App - Related mobile app ([iOS](https://apps.apple.com/ch/app/tell-world/id1528158666) / [Android](https://play.google.com/store/apps/details?id=com.vonrollhydro.tell&hl=gsw))
   - Infraport Mobile - Related mobile app ([iOS](https://apps.apple.com/ch/app/infraport/id1436604806) / [Android](https://play.google.com/store/apps/details?id=com.vonrollhydro.hydroportMobile&hl=en_US))
-  - Tech: Angular, NgRx, Nx workspace, Jest, Typescript, SCSS, Angular Material, Ionic 
+  - Tech: Angular, NgRx, Map API, Nx workspace, Jest, Typescript, SCSS, Angular Material, Ionic 
 
 - <a id="amh"></a> [All My Homes](https://www.allmyhomes.com/de/)
 
@@ -82,15 +83,15 @@ Title: <b>Web Developer & Mobile Developer</b>
 
 - <a id="commander"></a> [COMMANDER](https://www.rosenberger-telematics.com/en/products/telematics-software/) (Rosenberger Telematics)
   - Fleet management system allowing users to track devices mounted on objects working for heavy industry (e.g. excavators, wagons, trucks, etc). The system collects data from device sensors like temperature, speed, heading, and many more including custom ones defined by clients. The system works for over 2 thousand organizations, each organization has thousands of devices, and each device collects tens of thousands of snapshots containing data annually
-  - Tech: Angular, Typescript, SCSS, Angular Material
+  - Tech: Angular, Typescript, SCSS, Angular Material, Map API
 
 - <a id="r-apps"></a> [R-COCKPIT APP](https://www.rosenberger-telematics.com/en/products/cockpit-app/) (Rosenberger Telematics)
   - A mobile app providing most of [COMMANDER](#commander) functionalities   
-  - Tech: Flutter, Dart
+  - Tech: Flutter, Dart, Map API
 
 - [R-DRIVE App](https://www.rosenberger-telematics.com/en/products/drive-app/) (Rosenberger Telematics)
   - A mobile app that allows drivers to track their trips.
-  - Tech: Flutter, Dart
+  - Tech: Flutter, Dart, Map API
 
 - [R-SERVICE App](https://www.rosenberger-telematics.com/en/products/service-app/) (Rosenberger Telematics)
   - Mobile app allowing Service Technicians to install devices 
@@ -131,11 +132,11 @@ _October 2014 - July 2019_
 
 ### Things I like a lot (Personal time, no industry applications)
 
-- [React](https://react.dev/), [React Native](https://reactnative.dev/)
+- [React](https://react.dev/), [React Native](https://reactnative.dev/), [Figma](https://www.figma.com/)
 
 ### Things I would like to spend more on 
 
-- [Svelte](https://svelte.dev/), [Solid.js](https://www.solidjs.com/), [Cypress](https://www.cypress.io/)/[Playwright](https://playwright.dev/)
+- [Svelte](https://svelte.dev/), [Solid.js](https://www.solidjs.com/), [Next.js](https://nextjs.org/), [Cypress](https://www.cypress.io/)/[Playwright](https://playwright.dev/)
 
 ## Contact
 
