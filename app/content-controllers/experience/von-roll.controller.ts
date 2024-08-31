@@ -1,5 +1,5 @@
-import { ContentController } from "../abstracts";
-import { Skill } from "../enums";
+import { ContentController } from "@/abstracts";
+import { Skill } from "@/enums";
 
 export class VonRollController extends ContentController {
     static header = '2023 - Now';

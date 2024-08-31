@@ -1,10 +1,12 @@
-import { SectionController } from "../abstracts";
-import { VonRollController } from "../content-controllers/von-roll.controller";
+import { SectionController } from "@/abstracts";
+import { CodeteController, ComarchController, LoyconController, VonRollController } from "@/content-controllers";
 
 class ExperienceController extends SectionController {
     static header = 'Experience';
-
     static content = [
-        VonRollController
+        VonRollController,
+        CodeteController,
+        LoyconController,
+        ComarchController
     ];
 }
