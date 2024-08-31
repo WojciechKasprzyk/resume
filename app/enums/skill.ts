@@ -1,0 +1,28 @@
+export enum Skill {
+    Angular = 'Angular',
+    Typescript = 'Typescript',
+    NgRx = 'NgRx',
+    RxJs = 'RxJs',
+    SCSS = 'SCSS',
+    Nx = 'Nx Workspace',
+    Material = 'Angular Material',
+    MapApi = 'Map API',
+    Ionic = 'Ionic',
+    PrimeNg = 'PrimeNG',
+    Flutter = 'Flutter',
+    Dart = 'Dart',
+    Storybook = 'Storybook',
+    React = 'React',
+    NodeJs = 'Node.js',
+    ExpressJs = 'Express.js',
+    MongoDB = 'MongoDB',
+
+    ReactNative = 'React Native',
+    Figma = 'Figma',
+
+    Svelte = 'Svelte',
+    Solid = 'Solid.js',
+    NextJs = 'Next.js',
+    Cypress = 'Cypress',
+    Playwright = 'Playwright',
+}

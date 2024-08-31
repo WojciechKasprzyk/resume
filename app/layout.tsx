@@ -26,27 +26,6 @@ export default function RootLayout({
 
   const theme  = themeCookie || prefersColorScheme || '' as Theme;
 
-  // const headerList = headers();
-  // const prefersColorScheme = headerList.get('sec-ch-prefers-color-scheme');
-
-  // const [darkMode, setDarkMode] = useState(theme === 'dark');
-
-  // useEffect(() => {
-  //   // Add listener to update styles
-  //   // window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => onSelectMode(e.matches ? 'dark' : 'light'));
-  //
-  //   // Setup dark/light mode for the first time
-  //   console.log(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  //
-  //   setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-  //
-  //   // Remove listener
-  //   return () => {
-  //     window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => {
-  //     });
-  //   }
-  // }, [])
-
   return (
     <html lang="en">
     <Head>
@@ -62,23 +41,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// export async function getServerSideProps({ req }) {
-//   // Default to light mode
-//   let theme = 'light';
-//
-//   // Check for the `Sec-CH-Prefers-Color-Scheme` header (User-Agent Client Hints)
-//   const prefersColorScheme = req.headers['sec-ch-prefers-color-scheme'];
-//
-//   if (prefersColorScheme) {
-//     theme = prefersColorScheme;
-//   } else {
-//     // Fallback to checking user-agent or other methods if necessary
-//   }
-//
-//   return {
-//     props: {
-//       theme,
-//     },
-//   };
-// }
