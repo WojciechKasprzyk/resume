@@ -6,7 +6,7 @@ import {
     LikeALotController
 } from "@/content-controllers";
 
-export class TechStackController extends SectionController {
+export class TechStackSectionController extends SectionController {
     static header = 'Tech  stack';
     static content = [
         GreatAtController,

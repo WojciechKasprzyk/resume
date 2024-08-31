@@ -1,3 +1,4 @@
-export * from './tech-stack.controller';
-export * from './education.controller';
-export * from './experience.controller';
+export * from './about-section.controller';
+export * from './tech-stack-section.controller';
+export * from './education-section.controller';
+export * from './experience-section.controller';
