@@ -1,10 +1,10 @@
-import { ContentController } from "@/abstracts";
+import { ContentController } from "../../interfaces";
 import { Skill } from "@/enums";
 
-export class HypedAboutController extends ContentController {
-    static header = 'Just hyped about';
-    static title = 'Things I would like to spend more on';
-    static skills = [
+export const HypedAboutController: ContentController =   {
+    header: 'Just hyped about',
+    title: 'Things I would like to spend more on',
+    skills: [
         Skill.Svelte,
         Skill.Solid,
         Skill.NextJs,

@@ -1,9 +1,9 @@
-import { SectionController } from "@/abstracts";
+import { SectionController } from "../interfaces";
 import { AghController } from "@/content-controllers";
 
-export class EducationSectionController extends SectionController {
-    static header = 'Education';
-    static content = [
+export const EducationSectionController: SectionController =  {
+    header: 'Education',
+    content: [
         AghController
-    ];
+    ],
 }

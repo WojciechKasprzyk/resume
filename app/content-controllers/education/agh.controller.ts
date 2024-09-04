@@ -1,10 +1,10 @@
-import { ContentController } from "@/abstracts";
+import { ContentController } from "../../interfaces";
 
-export class AghController extends ContentController {
-    static header = 'October 2014 - July 2019';
-    static title = 'AGH University of Science and Technology';
-    static descriptionList = [
+export const AghController: ContentController =  {
+    header: 'October 2014 - July 2019',
+    title: 'AGH University of Science and Technology',
+    descriptionList: [
         'Master of Engineering - Electronics and Telecommunications | Networks and Services',
         'Bachelor of Engineering - Electronics and Telecommunications'
-    ];
+    ],
 }

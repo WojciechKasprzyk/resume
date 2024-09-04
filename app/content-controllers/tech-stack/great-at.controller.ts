@@ -1,10 +1,10 @@
-import { ContentController } from "@/abstracts";
+import { ContentController } from "../../interfaces";
 import { Skill } from "@/enums";
 
-export class GreatAtController extends ContentController {
-    static header = '>5 years industry experience';
-    static title = 'Things I\'m great at';
-    static skills = [
+export const GreatAtController: ContentController =  {
+    header: '>5 years industry experience',
+    title: 'Things I\'m great at',
+    skills: [
         Skill.Angular,
         Skill.Typescript,
         Skill.NgRx,

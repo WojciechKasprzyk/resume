@@ -1,4 +1,4 @@
-import { SectionController } from "@/abstracts";
+import { SectionController } from "../interfaces";
 import {
     GoodAtController,
     GreatAtController,
@@ -6,12 +6,12 @@ import {
     LikeALotController
 } from "@/content-controllers";
 
-export class TechStackSectionController extends SectionController {
-    static header = 'Tech  stack';
-    static content = [
+export const TechStackSectionController: SectionController =  {
+    header: 'Tech  stack',
+    content: [
         GreatAtController,
         GoodAtController,
         LikeALotController,
         HypedAboutController
-    ];
+    ],
 }

@@ -1,9 +1,9 @@
-import { SectionController } from "@/abstracts";
+import { SectionController } from "../interfaces";
 import { AboutController } from "@/content-controllers";
 
-export class AboutSectionController extends SectionController {
-    static header = 'About';
-    static content = [
+export const AboutSectionController: SectionController =  {
+    header: 'About',
+    content: [
         AboutController
-    ];
+    ],
 }

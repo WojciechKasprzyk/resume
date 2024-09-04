@@ -1,11 +1,11 @@
-import { ContentController } from "@/abstracts";
+import { ContentController } from "../../interfaces";
 import { Skill } from "@/enums";
 
-export class VonRollController extends ContentController {
-    static header = '2023 - Now';
-    static title = 'Senior Frontend Developer | VonRoll';
-    static description = 'Developed a web application for visualizing and managing city water networks, including infrastructure and devices. Created related hybrid mobile apps, implementing specific features from the web application and extending them with additional functionalities.';
-    static skills = [
+export const VonRollController: ContentController =  {
+    header: '2023 - Now',
+    title: 'Senior Frontend Developer | VonRoll',
+    description: 'Developed a web application for visualizing and managing city water networks, including infrastructure and devices. Created related hybrid mobile apps, implementing specific features from the web application and extending them with additional functionalities.',
+    skills: [
         Skill.Angular,
         Skill.Typescript,
         Skill.NgRx,

@@ -1,10 +1,10 @@
-import { ContentController } from "@/abstracts";
+import { ContentController } from "../../interfaces";
 import { Skill } from "@/enums";
 
-export class LikeALotController extends ContentController {
-    static header = 'Personal time, no industry experience';
-    static title = 'Things I like a lot';
-    static skills = [
+export const LikeALotController: ContentController =   {
+    header: 'Personal time, no industry experience',
+    title: 'Things I like a lot',
+    skills: [
         Skill.React,
         Skill.ReactNative,
         Skill.Figma,
