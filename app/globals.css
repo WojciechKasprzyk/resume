@@ -22,7 +22,8 @@
   --h2-subtitle-font-size: 1rem;
   --h3-font-size: 1rem;
   --p-font-size: .875rem;
-  --tile-header-font-size: .75rem;
+  /*--tile-header-font-size: .75rem;*/
+  --tile-header-font-size: .875rem;
   --footer-font-size: .625rem;
 
   --mode-icon-margin: 1.25rem;
@@ -122,10 +123,10 @@ section {
 
 .tile {
   display: grid;
-  gap: .5rem;
+  gap: var(--page-global-gap);
 
   &:not(:first-of-type) {
-    margin-top: var(--gap);
+    margin-top: var(--section-margin-bottom);
   }
 }
 
