@@ -5,13 +5,16 @@
   /*color-scheme: light dark;*/
   --bg-dark: #1F2533;
   --bg-light: #EAEAEA;
-  --text-primary-dark: #fff;
-  --text-primary-light: #000;
+  --text-primary-dark: #e4e4e4;
+  --text-primary-light: #222;
   --text-secondary-dark: #e6e6e6;
   --text-secondary-light: #666;
+  --text-accent-dark: #fff;
+  --text-accent-light: #000;
 
   --text-primary-color: var(--text-primary-light);
   --text-secondary-color: var(--text-secondary-light);
+  --text-accent-color: var(--text-accent-light);
   --bg-color: var(--bg-light);
 
   --h1-font-size: 2rem;
@@ -28,11 +31,13 @@
   --page-vertical-padding: 3rem;
   --page-global-gap: .5rem;
   --gap: 1.25rem;
+  --section-margin-bottom: 2rem;
 
   /* Dark mode */
   @media (prefers-color-scheme: dark) {
     --text-primary-color: var(--text-primary-dark);
     --text-secondary-color: var(--text-secondary-dark);
+    --text-accent-color: var(--text-accent-dark);
     --bg-color: var(--bg-dark);
   }
 
@@ -78,6 +83,7 @@ body {
   &.dark {
     --text-primary-color: var(--text-primary-dark);
     --text-secondary-color: var(--text-secondary-dark);
+    --text-accent-color: var(--text-accent-dark);
     --bg-color: var(--bg-dark);
 
     & .mode-button--dark {
@@ -92,6 +98,7 @@ body {
   &.light {
     --text-primary-color: var(--text-primary-light);
     --text-secondary-color: var(--text-secondary-light);
+    --text-accent-color: var(--text-accent-light);
     --bg-color: var(--bg-light);
 
     & .mode-button--dark {
@@ -109,6 +116,10 @@ header {
   gap: var(--page-global-gap);
 }
 
+section {
+  margin-bottom: var(--section-margin-bottom);
+}
+
 .tile {
   display: grid;
   gap: .5rem;
@@ -124,11 +135,17 @@ h1, h2, h3 {
 
 h1 {
   font-size: var(--h1-font-size);
+  color: var(--text-accent-color);
 }
 
 h2 {
   font-size: var(--h2-font-size);
-  padding: 1.25rem 0;
+  color: var(--text-accent-color);
+  padding: 3rem 0;
+
+  &:not(.subtitle) {
+    text-transform: uppercase;
+  }
 
   &.subtitle {
     font-size: var(--h2-subtitle-font-size);
@@ -144,10 +161,27 @@ h3 {
 
 p {
   font-size: var(--p-font-size);
+  line-height: 140%;
   margin: 0;
 
   .short-summary {
     max-width: 280px;
+  }
+
+  &.summary {
+    font-size: var(--h3-font-size);
+  }
+}
+
+b {
+  color: var(--text-accent-color);
+}
+
+path {
+  stroke: var(--text-accent-color);
+  &.mail {
+    fill: var(--text-accent-color);
+    stroke: none;
   }
 }
 
@@ -207,9 +241,17 @@ ol {
 
 .skill {
   font-size: var(--p-font-size);
-  padding: 4px;
-  border-radius: 8px;
-  border: 1px solid var(--text-primary-color);
+  color: var(--text-accent-color);
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 2px solid var(--text-accent-color);
+}
+
+.socials {
+  display: flex;
+  gap: var(--page-global-gap);
+  padding-top: 2.5rem;
 }
 
 /* Dark mode */
