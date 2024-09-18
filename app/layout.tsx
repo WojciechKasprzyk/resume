@@ -35,9 +35,9 @@ export default function RootLayout({
       <title></title>
     </head>
     {/*suppressHydrationWarning*/}
-    <body className={`${inter.className} ${theme}`}>
+      <body className={`${inter.className} ${theme}`}>
         {children}
-        </body>
+      </body>
     </html>
   );
 }

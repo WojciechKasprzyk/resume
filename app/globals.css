@@ -75,6 +75,8 @@
 /*}*/
 
 body {
+  scroll-behavior: smooth;
+
   color: var(--text-primary-color);
   background-color: var(--bg-color);
 
@@ -127,6 +129,11 @@ section {
 
   &:not(:first-of-type) {
     margin-top: var(--section-margin-bottom);
+  }
+
+  .inner-tile {
+    display: grid;
+    gap: var(--page-global-gap);
   }
 }
 
@@ -214,7 +221,7 @@ footer {
 }
 
 ul, ol {
-  /*list-style: none;*/
+  list-style: none;
   /*TODO*/
   padding-inline-start: .875rem;
   margin: 0;
@@ -225,7 +232,6 @@ ul, ol {
 }
 
 ol {
-  list-style: none;
   padding: 0;
   margin: 0;
 
@@ -238,6 +244,46 @@ ol {
   font-size: var(--tile-header-font-size);
   color: var(--text-secondary-color);
 
+}
+
+nav {
+  display: none;
+  margin-top: 3rem;
+
+  ul {
+    padding: 0;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary-color);
+    text-decoration: none;
+    padding: 8px 0;
+    transition: all .15s ease-in-out;
+
+
+    span {
+      transition: all .15s ease-in-out;
+      display: block;
+      height: 1px;
+      width: 2rem;
+      background: var(--text-primary-color);
+      margin-right: 1rem;
+    }
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: var(--text-accent-color);
+    font-weight: bold;
+
+    span {
+      background: var(--text-accent-color);
+      width: 4rem;
+      height: 2px;
+    }
+  }
 }
 
 .skill {
@@ -267,6 +313,49 @@ ol {
     display: none;
   }
 }
+
+@media screen and (min-width: 640px) {
+  .tile {
+    display: flex;
+  }
+
+  .header {
+    width: 220px;
+    min-width: 220px;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  body {
+    display: flex;
+    /*height: 100vh;*/
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  header {
+    width: 500px;
+    height: calc(100vh - 2*var(--page-vertical-padding));
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+
+    .socials {
+      margin-top: auto;
+    }
+  }
+
+  nav {
+    display: block;
+  }
+
+  main {
+    margin-left: calc(500px + var(--page-horizontal-padding));
+  }
+
+}
+
 
 /*@media (prefers-dark-interface) {*/
 /*  color: var(--text-dark);*/

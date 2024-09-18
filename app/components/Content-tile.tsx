@@ -12,10 +12,12 @@ function ContentTile({contentController}: ContentTileProps) {
     return (
         <div className='tile'>
             {contentController.header           && <div className="header">{contentController.header}</div>}
-            {contentController.title            && <h3>{contentController.title}</h3>}
-            {contentController.description      && description}
-            {contentController.descriptionList  && <ul>{descriptionList}</ul>}
-            {contentController.skills           && <ol>{skillsList}</ol>}
+            <div className='inner-tile'>
+                {contentController.title            && <h3>{contentController.title}</h3>}
+                {contentController.description      && description}
+                {contentController.descriptionList  && <ul>{descriptionList}</ul>}
+                {contentController.skills           && <ol>{skillsList}</ol>}
+            </div>
         </div>
     )
 }
