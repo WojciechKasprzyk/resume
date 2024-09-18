@@ -2,45 +2,54 @@
 import { useEffect } from "react";
 
 type ScrollDirection = 'down' | 'up';
+type SectionIndex = 0 | 1 | 2 | 3;
 
-function getSectionIndexByScrollProgress(scrollProgress: number, scrollDirection: ScrollDirection) {
+let skipScroll = false;
+
+function getSectionIndexByScrollProgress(scrollProgress: number, scrollDirection: ScrollDirection): SectionIndex {
     if (scrollDirection === 'down') {
         if (scrollProgress > 0.85) return 3;
-        if (scrollProgress > 0.65) return 2;
-        if (scrollProgress > 0.3) return 1;
+        if (scrollProgress > 0.70) return 2;
+        if (scrollProgress > 0.2) return 1;
     } else {
         if (scrollProgress > 0.75) return 3;
-        if (scrollProgress > 0.55) return 2;
-        if (scrollProgress > 0.2) return 1;
+        if (scrollProgress > 0.60) return 2;
+        if (scrollProgress > 0.1) return 1;
     }
 
     return 0;
 }
 
-// function setActiveSection(sections: NodeListOf<HTMLElement>, lastScrollY: number) {
-//     let currentSection: HTMLElement | null = null;
-//     const scrollProgress = scrollY / screen.height;
-//     const scrollDirection: ScrollDirection = scrollY > lastScrollY ? "down" : "up";
-//
-//     currentSection = sections[getSectionIndexByScrollProgress(scrollProgress, scrollDirection)];
-//     setActive(currentSection.getAttribute("id"));
-//     lastScrollY = scrollY;
-// }
+function setActiveSection(lastScrollY: number) {
+    const sections = document.querySelectorAll("section");
+    let currentSection: HTMLElement = sections[0];
+    const maxScrollY = document.body.offsetHeight - window.innerHeight;
+    const scrollProgress = scrollY / maxScrollY;
+    const scrollDirection: ScrollDirection = scrollY > lastScrollY ? "down" : "up";
+
+    currentSection = sections[getSectionIndexByScrollProgress(scrollProgress, scrollDirection)];
+    setActive(currentSection.getAttribute("id"));
+}
 
 function watchScrollSection() {
     let lastScrollY = 0;
-    const sections = document.querySelectorAll("section");
+
+    setActiveSection(lastScrollY);
 
     document.addEventListener("scroll", function () {
-        // sections.forEach(s => {
-        //     console.log(s.offsetTop)
-        // })
-        let currentSection: HTMLElement | null = null;
-        const scrollProgress = scrollY / screen.height;
-        const scrollDirection: ScrollDirection = scrollY > lastScrollY ? "down" : "up";
+        if (skipScroll) {
+            return setTimeout(() => skipScroll = false);
+        }
 
-        currentSection = sections[getSectionIndexByScrollProgress(scrollProgress, scrollDirection)];
-        setActive(currentSection.getAttribute("id"));
+        // const sections = document.querySelectorAll("section");
+        // let currentSection: HTMLElement = sections[0];
+        // const maxScrollY = document.body.offsetHeight - window.innerHeight;
+        // const scrollProgress = scrollY / maxScrollY;
+        // const scrollDirection: ScrollDirection = scrollY > lastScrollY ? "down" : "up";
+        //
+        // currentSection = sections[getSectionIndexByScrollProgress(scrollProgress, scrollDirection)];
+        // setActive(currentSection.getAttribute("id"));
+        setActiveSection(lastScrollY);
         lastScrollY = scrollY;
     });
 }
@@ -58,14 +67,19 @@ function setActive(currentSection: string | null): void {
     });
 }
 
+function redirectToSection(currentSection: string | null): void {
+    setActive(currentSection);
+    skipScroll = true;
+}
+
 function Navbar() {
-    useEffect(() => watchScrollSection(), []);
+    // useEffect(() => watchScrollSection(), []);
     return <nav>
         <ul>
-            <li><a className="nav-link" onClick={() => setActive('About')} href="#About"><span></span>ABOUT</a></li>
-            <li><a className="nav-link" onClick={() => setActive('Experience')} href="#Experience"><span></span>EXPERIENCE</a></li>
-            <li><a className="nav-link" onClick={() => setActive('Education')} href="#Education"><span></span>EDUCATION</a></li>
-            <li><a className="nav-link" onClick={() => setActive('Tech stack')} href="#Tech stack"><span></span>TECH STACK</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection('About')} href="#About"><span></span>ABOUT</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection('Experience')} href="#Experience"><span></span>EXPERIENCE</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection('Education')} href="#Education"><span></span>EDUCATION</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection('Tech stack')} href="#Tech stack"><span></span>TECH STACK</a></li>
         </ul>
     </nav>;
 }
