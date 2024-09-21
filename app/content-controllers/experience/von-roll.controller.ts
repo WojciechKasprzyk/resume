@@ -15,5 +15,6 @@ export const VonRollController: ContentController =  {
         Skill.Material,
         Skill.MapApi,
         Skill.Ionic,
-    ]
+    ],
+    contentLink: 'https://www.vonroll-hydro.world/en/infraport.html'
 }

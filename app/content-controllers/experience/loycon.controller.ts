@@ -23,5 +23,6 @@ export const LoyconController: ContentController =  {
         Skill.PrimeNg,
         Skill.Flutter,
         Skill.Dart,
-    ]
+    ],
+    contentLink: 'https://loycon.pl/'
 }

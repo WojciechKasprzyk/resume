@@ -9,9 +9,9 @@ interface SectionProps {
 function Section({sectionController}: SectionProps) {
     const contentList = sectionController.content.map(contentController => <ContentTile key={contentController.header} contentController={contentController} />);
     return (
-        <section id={sectionController.header}>
+        <section id={sectionController.id}>
             {sectionController.header && <h2>{sectionController.header}</h2>}
-            {contentList}
+            <div className="content-list">{contentList}</div>
         </section>
     )
 }

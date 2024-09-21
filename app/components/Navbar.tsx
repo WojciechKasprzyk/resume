@@ -1,5 +1,11 @@
 'use client'
 import { useEffect } from "react";
+import {
+    AboutSectionController,
+    EducationSectionController,
+    ExperienceSectionController,
+    TechStackSectionController
+} from "@/section-controllers";
 
 type ScrollDirection = 'down' | 'up';
 type SectionIndex = 0 | 1 | 2 | 3;
@@ -41,14 +47,6 @@ function watchScrollSection() {
             return setTimeout(() => skipScroll = false);
         }
 
-        // const sections = document.querySelectorAll("section");
-        // let currentSection: HTMLElement = sections[0];
-        // const maxScrollY = document.body.offsetHeight - window.innerHeight;
-        // const scrollProgress = scrollY / maxScrollY;
-        // const scrollDirection: ScrollDirection = scrollY > lastScrollY ? "down" : "up";
-        //
-        // currentSection = sections[getSectionIndexByScrollProgress(scrollProgress, scrollDirection)];
-        // setActive(currentSection.getAttribute("id"));
         setActiveSection(lastScrollY);
         lastScrollY = scrollY;
     });
@@ -73,13 +71,13 @@ function redirectToSection(currentSection: string | null): void {
 }
 
 function Navbar() {
-    // useEffect(() => watchScrollSection(), []);
+    useEffect(() => watchScrollSection(), []);
     return <nav>
         <ul>
-            <li><a className="nav-link" onClick={() => redirectToSection('About')} href="#About"><span></span>ABOUT</a></li>
-            <li><a className="nav-link" onClick={() => redirectToSection('Experience')} href="#Experience"><span></span>EXPERIENCE</a></li>
-            <li><a className="nav-link" onClick={() => redirectToSection('Education')} href="#Education"><span></span>EDUCATION</a></li>
-            <li><a className="nav-link" onClick={() => redirectToSection('Tech stack')} href="#Tech stack"><span></span>TECH STACK</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection(AboutSectionController.id)} href={`#${AboutSectionController.id}`}><span></span>ABOUT</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection(ExperienceSectionController.id)} href={`#${ExperienceSectionController.id}`}><span></span>EXPERIENCE</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection(EducationSectionController.id)} href={`#${EducationSectionController.id}`}><span></span>EDUCATION</a></li>
+            <li><a className="nav-link" onClick={() => redirectToSection(TechStackSectionController.id)} href={`#${TechStackSectionController.id}`}><span></span>TECH STACK</a></li>
         </ul>
     </nav>;
 }

@@ -2,7 +2,7 @@
 function Footer() {
     return (
         <footer>
-            Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and deployed with Vercel. All text is set in the Inter typeface.
+            Designed in <a href="https://www.figma.com/">Figma</a> and coded in <a href="https://www.jetbrains.com/webstorm/">Webstorm</a>. Built with <a href="https://nextjs.org/">Next.js</a> and deployed with <a href="https://vercel.com/">Vercel</a>. All text is set in the <a href="https://fonts.google.com/specimen/Inter">Inter typeface</a>.
         </footer>
     );
 }

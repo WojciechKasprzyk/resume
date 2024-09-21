@@ -7,6 +7,7 @@ import {
 } from "@/content-controllers";
 
 export const TechStackSectionController: SectionController =  {
+    id: 'techstack',
     header: 'Tech stack',
     content: [
         GreatAtController,
