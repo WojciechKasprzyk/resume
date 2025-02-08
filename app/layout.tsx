@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+//TODO split globals css
 import "./globals.css";
 import { cookies, headers } from "next/headers";
 import Head from "next/head";
@@ -13,13 +14,13 @@ export const metadata: Metadata = {
 
 type Theme = 'light' | 'dark' | '';
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headerList = headers();
-  const cookieStore = cookies();
+  const headerList = await headers();
+  const cookieStore = await cookies();
 
   const prefersColorScheme = headerList.get('sec-ch-prefers-color-scheme');
   const themeCookie = cookieStore.get('theme')?.value;

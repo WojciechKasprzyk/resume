@@ -10,4 +10,8 @@ export const ExperienceSectionController: SectionController =  {
         LoyconController,
         ComarchController
     ],
+    link: {
+        label: 'View Full Résumé',
+        href: '/wojciech-kasprzyk-resume.pdf'
+    }
 }
