@@ -5,7 +5,7 @@ export interface ContentController {
     readonly title?: string;
     readonly summary?: string[];
     readonly descriptionClass?: string;
-    readonly description?: HTMLElement[];
+    readonly description?: string[];
     readonly descriptionList?: string[];
     readonly skills?: Skill[];
     readonly skillLinksEnabled?: boolean;
