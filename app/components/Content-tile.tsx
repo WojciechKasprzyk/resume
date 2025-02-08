@@ -18,7 +18,7 @@ function ContentTile({contentController}: ContentTileProps) {
                                                                      linksEnabled={contentController.skillLinksEnabled}/>);
 
     if (contentController.contentLink) {
-        return <a className='link-icon' href={contentController.contentLink}>
+        return <a className='link-icon' target="_blank" href={contentController.contentLink}>
             <div className='tile'>
                 {contentController.header && <div className="header">{contentController.header} </div>}
                 <div className='inner-tile'>

@@ -14,7 +14,7 @@ function Section({sectionController}: SectionProps) {
             <div className="content-list">{contentList}</div>
             {sectionController.link &&
                 <div className="link">
-                    <a className='link-icon' href={sectionController.link.href}>{sectionController.link.label}
+                    <a className='link-icon' target="_blank" href={sectionController.link.href}>{sectionController.link.label}
                         <LinkIcon />
                     </a>
                 </div>

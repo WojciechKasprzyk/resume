@@ -7,7 +7,7 @@ interface SkillProps {
 
 function Skill({skill, linksEnabled}: SkillProps) {
     if (linksEnabled) {
-        return <a href={SKILLS_LINKS[skill]}><li className="skill">{skill}</li></a>
+        return <a href={SKILLS_LINKS[skill]} target="_blank"><li className="skill">{skill}</li></a>
     }
     return <li className="skill">{skill}</li>;
 }
