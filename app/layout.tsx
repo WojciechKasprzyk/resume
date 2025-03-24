@@ -46,9 +46,6 @@ export default async function RootLayout({
     <Head>
       <link rel="shortcut icon" href="/favicon.ico"/>
     </Head>
-    <head>
-      <title></title>
-    </head>
     {/*suppressHydrationWarning*/}
       <body className={`${inter.className} ${theme}`}>
         {children}
