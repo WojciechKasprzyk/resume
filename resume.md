@@ -4,7 +4,7 @@ I am a big fan of application,
 <b>performance optimization</b> and reactive programming. 
 I love finding new, better ways to solve technical and business cases. 
 
-Over the past <b>7 years</b>, I contributed to user-oriented CMS for the healthcare sector, 
+Over the past <b>8 years</b>, I contributed to user-oriented CMS for the healthcare sector, 
 fleet management web and mobile applications tracking vehicles owned by over two thousand organizations, 
 fluid management system dedicated to petrol retailers and buyers, 
 and real estate market micro frontend applications connecting buyers, brokers, and developers.
